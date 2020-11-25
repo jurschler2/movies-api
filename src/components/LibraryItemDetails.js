@@ -2,17 +2,17 @@ import React from 'react';
 
 /**
  *  DESCRIPTION: 
- *  FLOW: App => ItemList
+ *  FLOW: App => LibraryItemDetails
  *  PARENT: App
  *  CHILDREN: none
  */
 
-function ItemList() {
+function LibraryItemDetails() {
 
   return (
 
     <div>
-      ItemList
+      LibraryItemDetails
     </div>
 
   )
@@ -20,4 +20,4 @@ function ItemList() {
 }
 
 
-export default ItemList;
+export default LibraryItemDetails;

@@ -2,17 +2,17 @@ import React from 'react';
 
 /**
  *  DESCRIPTION: 
- *  FLOW: App => Search
+ *  FLOW: App => LibraryItemCard
  *  PARENT: App
  *  CHILDREN: none
  */
 
-function Search() {
+function LibraryItemCard() {
 
   return (
 
     <div>
-      Search
+      LibraryItemCard
     </div>
 
   )
@@ -20,4 +20,4 @@ function Search() {
 }
 
 
-export default Search;
+export default LibraryItemCard;
