@@ -1,4 +1,6 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { upvoteMovieInAPI, downvoteMovieInAPI } from '../reducer/actions';
 
 /**
  *  DESCRIPTION: 
@@ -7,12 +9,30 @@ import React from 'react';
  *  CHILDREN: none
  */
 
-function LibraryItemCard() {
+function LibraryItemCard({ imdbID, title, poster, upvote, downvote }) {
+
+  const dispatch = useDispatch();
+
+  const handleUp = evt => {
+    evt.preventDefault();
+    dispatch(upvoteMovieInAPI(imdbID));
+  }
+  const handleDown = evt => {
+    evt.preventDefault();
+    dispatch(downvoteMovieInAPI(imdbID));
+  }
 
   return (
 
-    <div>
-      LibraryItemCard
+    <div className="searchCard">
+      <div>
+        <img src={poster} alt={poster} />
+      </div>
+      <div>
+        {title}
+      </div>
+      <button onClick={handleUp}>{upvote} Up</button>
+      <button onClick={handleDown}>{downvote} Down</button>
     </div>
 
   )

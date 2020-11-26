@@ -72,8 +72,9 @@ export function upvoteMovieInAPI(movieID) {
 
     try {
 
-      let res = await axios.post(`${BASE_URL}/${movieID}/upvote`);
-      if (res.data.upvote.upvote) dispatch(upvoteMovie(movieID));
+      let res = await axios.post(`${BASE_URL}${movieID}/upvote`);
+      console.log("This is the res.data.upvote:", res)
+      if (res.data.upvote) dispatch(upvoteMovie(movieID));
 
     } catch (err) {
 
@@ -89,8 +90,8 @@ export function downvoteMovieInAPI(movieID) {
 
     try {
 
-      let res = await axios.post(`${BASE_URL}/${movieID}/downvote`);
-      if (res.data.downvote.downvote) dispatch(downvoteMovie(movieID));
+      let res = await axios.post(`${BASE_URL}${movieID}/downvote`);
+      if (res.data.downvote) dispatch(downvoteMovie(movieID));
 
     } catch (err) {
 

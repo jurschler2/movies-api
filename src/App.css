@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.searchResults-container {
+
+  display: inline;
+
+}
+
+.searchCard {
+
+  display: inline-block;
+
+}

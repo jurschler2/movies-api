@@ -22,11 +22,10 @@ function SearchContainer() {
 
     let newSearch = await getSearchResultsOMDB(title);
     setSearchResults(newSearch);
-    console.log("These are the search results after the button is clicked:", searchResults);
 
   }
 
-  async function handleAddToLibrary(title) {
+  async function addToLibrary(title) {
 
     let seenMovie = await getSpecificMovieOMDB(title);
     dispatch(addMovieToAPI(seenMovie));
@@ -35,20 +34,19 @@ function SearchContainer() {
 
   const renderSearchCards = () => {
   
-      console.log("These are the search results:", searchResults);
-  
       return (
-        searchResults.map(m => (<SearchCard imdbID={m.imdbID} title={m.Title} poster={m.Poster} addToLibary={handleAddToLibrary}/>))
+        searchResults.map(m => (<SearchCard imdbID={m.imdbID} title={m.Title} poster={m.Poster} addToLibrary={addToLibrary} />))
       )
   
   }
 
-
+  console.log("This is the addToLibrary function in the searchContainer component:", addToLibrary);
+  
   return (
 
     <div>
       <SearchBar handleSearch={handleSearch} />
-      <div>
+      <div className="searchResults-container">
         {!searchResults.length ? null : renderSearchCards()}
       </div>
     </div>

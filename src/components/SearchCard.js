@@ -16,7 +16,7 @@ function SearchCard({ imdbID, title, poster, addToLibrary }) {
 
   return (
 
-    <div>
+    <div className="searchCard">
       <div>
         <img src={poster} alt={poster} />
       </div>

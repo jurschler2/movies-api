@@ -22,6 +22,7 @@ function SearchBar({ handleSearch }) {
 
   const handleSubmit = evt => {
     evt.preventDefault();
+    console.log("This is the handleSearch function:", handleSearch)
     handleSearch(formData.text);
     setFormData({ ...INITIAL_STATE });
   }
