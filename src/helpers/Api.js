@@ -9,7 +9,6 @@ async function getSearchResultsOMDB(title) {
   try {
     
     let results = await axios.get(`${BASE_URL}omdb/search/${title}`);
-    console.log("These are the results of the API call to search:", results.data.movies);
     return results.data.movies;
 
   } catch (err) {

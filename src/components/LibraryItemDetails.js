@@ -7,12 +7,13 @@ import React from 'react';
  *  CHILDREN: none
  */
 
-function LibraryItemDetails() {
+function LibraryItemDetails({ year, director, plot }) {
 
   return (
 
     <div>
-      LibraryItemDetails
+      <span>Year:{year} Director:{director}</span>
+      <p>{plot}</p>
     </div>
 
   )

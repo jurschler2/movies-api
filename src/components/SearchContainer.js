@@ -35,12 +35,15 @@ function SearchContainer() {
   const renderSearchCards = () => {
   
       return (
-        searchResults.map(m => (<SearchCard imdbID={m.imdbID} title={m.Title} poster={m.Poster} addToLibrary={addToLibrary} />))
+        searchResults.map(m => (
+            <SearchCard 
+              imdbID={m.imdbID}
+              title={m.Title} 
+              poster={m.Poster} 
+              addToLibrary={addToLibrary} />))
       )
   
   }
-
-  console.log("This is the addToLibrary function in the searchContainer component:", addToLibrary);
   
   return (
 
