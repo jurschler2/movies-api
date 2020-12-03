@@ -11,7 +11,7 @@ function LibraryItemDetails({ year, director, plot }) {
 
   return (
 
-    <div>
+    <div className="libraryItemDetails">
       <span>Year:{year} Director:{director}</span>
       <p>{plot}</p>
     </div>

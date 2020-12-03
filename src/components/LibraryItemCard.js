@@ -29,7 +29,7 @@ function LibraryItemCard({ imdbID, title, year, director, plot, poster, upvote, 
 
   return (
 
-    <div className="searchCard">
+    <div className="libraryCard">
       <div>
         <img src={poster} alt={poster} />
       </div>
